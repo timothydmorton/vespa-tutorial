@@ -14,7 +14,8 @@ Running a `vespa` calculation requires creating `star.ini` and `fpp.ini` config 
 ## Host star
 
 Create a `star.ini` file containing the RA/Dec coordinates of the transit candidate host star, and any available observed properties, such as broadband photometric magnitudes, spectroscopic properties, or parallax.
-One of the magnitudes provided must be the band in which the transit was observed.
+All quantities are listed as `value, uncertainty`.
+One of the magnitudes provided must be the band in which the transit was observed, and need not have an uncertainty (values without uncertainties will not be used in the model fitting).
 Here is an example `star.ini` file:
 
     ra = 289.217499
