@@ -138,6 +138,13 @@ After running `calcfpp`, you now have the following files in your directory:
     $ ls TestCase1
     < full contents of directory >
 
+Again, we see `*.h5` and `*.png` files have been created.
+
+One interesting file is the `starfield.h5` file, which contains the TRILEGAL simulation of the background population of stars.
+Let's take a look at it contents:
+
+    [take a look]
+
 `popset.h5` contains the simulated populations, and can be loaded as follows:
 
     from vespa import PopulationSet
@@ -147,6 +154,8 @@ Individual populations can be accessed from this object as follows:
 
     bebs = popset['beb']
     hebs = popset['heb']
+
+Each of these population objects has a `.stars` attribute that contains all of the data for all the simulated instances of that model.
 
 As before, `*.png` files are diagnostic figures.  `FPPsummary.png` displays the summary of the results, and the others are informative visualizations of the various models, showing the distribution of simulated trapezoidal model parameters compared to the trapezoidal fit to the true transit candidate signal.
 
