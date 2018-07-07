@@ -44,6 +44,13 @@ This file should have the following three columns in order:
 The photometry should be limited to only those points within just a few transit durations of the transit, not the entire orbital phase.
 This file may have any name, but for current purposes, let's call it `transit.txt`.
 
+You can check to make sure that this is put together correctly by using the utilities provided in and used by `vespa` to load and visualize the candidate:
+
+    %matplotlib inline
+    from vespa import TransitSignal
+    trsig = TransitSignal.from_ascii('TestCase1/transit.txt')
+    trsig.plot()
+
 The results of three other analyses (calculations that `vespa` does not do) must also be provided:
 
   - A best-fit estimate of the planet/star radius ratio.
